@@ -796,6 +796,13 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+"@babel/runtime@7.x":
+  version "7.13.10"
+  resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.13.10.tgz?cache=0&sync_timestamp=1615243284383&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
+  integrity sha1-R9QqV7YJX0Ro2kQDiP262L6/DX0=
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
   version "7.12.18"
   resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.12.18.tgz?cache=0&sync_timestamp=1613665243059&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.12.18.tgz"
@@ -894,6 +901,11 @@
   version "2.7.0"
   resolved "https://registry.npm.taobao.org/@popperjs/core/download/@popperjs/core-2.7.0.tgz"
   integrity sha1-X3dgllFw9/HikQ0kmMW+iLR6Kow=
+
+"@popperjs/core@^2.5.4":
+  version "2.9.1"
+  resolved "https://registry.npm.taobao.org/@popperjs/core/download/@popperjs/core-2.9.1.tgz?cache=0&sync_timestamp=1615219280778&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40popperjs%2Fcore%2Fdownload%2F%40popperjs%2Fcore-2.9.1.tgz#7f554e7368c9ab679a11f4a042ca17149d70cf12"
+  integrity sha1-f1VOc2jJq2eaEfSgQsoXFJ1wzxI=
 
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.8.0"
@@ -1082,6 +1094,30 @@
     "@types/uglify-js" "*"
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
+
+"@vant/icons@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.npm.taobao.org/@vant/icons/download/@vant/icons-1.5.3.tgz?cache=0&sync_timestamp=1613997504088&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vant%2Ficons%2Fdownload%2F%40vant%2Ficons-1.5.3.tgz#b7779f67bf608d417a82452fbede406dfa46b439"
+  integrity sha1-t3efZ79gjUF6gkUvvt5AbfpGtDk=
+
+"@vant/lazyload@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/@vant/lazyload/download/@vant/lazyload-1.0.4.tgz#f1bbd81217cf416a377ab2f928f2a147a4489259"
+  integrity sha1-8bvYEhfPQWo3erL5KPKhR6RIklk=
+
+"@vant/popperjs@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/@vant/popperjs/download/@vant/popperjs-1.0.4.tgz#49c20809a3828e7b036e23d50fb56121e997618f"
+  integrity sha1-ScIICaOCjnsDbiPVD7VhIemXYY8=
+  dependencies:
+    "@popperjs/core" "^2.5.4"
+
+"@vant/use@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npm.taobao.org/@vant/use/download/@vant/use-1.0.5.tgz#44bee952ebccf9396414a51c4d4b458434a9de23"
+  integrity sha1-RL7pUuvM+TlkFKUcTUtFhDSp3iM=
+  dependencies:
+    "@babel/runtime" "7.x"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
@@ -2759,6 +2795,11 @@ core-js@^3.6.5:
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.9.0.tgz?cache=0&sync_timestamp=1613668840564&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.9.0.tgz"
   integrity sha1-eQsbsRVToicrNuJiXHF52zRUkvg=
 
+core-js@^3.8.1:
+  version "3.9.1"
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.9.1.tgz?cache=0&sync_timestamp=1614537347747&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.9.1.tgz#cec8de593db8eb2a85ffb0dbdeb312cb6e5460ae"
+  integrity sha1-zsjeWT246yqF/7Db3rMSy25UYK4=
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz"
@@ -3003,6 +3044,11 @@ csstype@^2.6.8:
   version "2.6.15"
   resolved "https://registry.npm.taobao.org/csstype/download/csstype-2.6.15.tgz?cache=0&sync_timestamp=1613467084670&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-2.6.15.tgz"
   integrity sha1-ZVkBZj2x1lLxDLV6xq9aBZcq6h8=
+
+custom-event-polyfill@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npm.taobao.org/custom-event-polyfill/download/custom-event-polyfill-1.0.7.tgz#9bc993ddda937c1a30ccd335614c6c58c4f87aee"
+  integrity sha1-m8mT3dqTfBowzNM1YUxsWMT4eu4=
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -3630,7 +3676,7 @@ event-pubsub@4.3.0:
   resolved "https://registry.npm.taobao.org/event-pubsub/download/event-pubsub-4.3.0.tgz?cache=0&sync_timestamp=1606361507592&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fevent-pubsub%2Fdownload%2Fevent-pubsub-4.3.0.tgz"
   integrity sha1-9o2Ba8KfHsAsU53FjI3UDOcss24=
 
-eventemitter3@^4.0.0:
+eventemitter3@^4.0.0, eventemitter3@^4.0.3:
   version "4.0.7"
   resolved "https://registry.npm.taobao.org/eventemitter3/download/eventemitter3-4.0.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feventemitter3%2Fdownload%2Feventemitter3-4.0.7.tgz"
   integrity sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=
@@ -4338,6 +4384,14 @@ highlight.js@^10.0.0:
   version "10.6.0"
   resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.6.0.tgz"
   integrity sha1-AHOqcdVmkGllum4be+eyaC9eGLY=
+
+hls.js@^0.14.17:
+  version "0.14.17"
+  resolved "https://registry.npm.taobao.org/hls.js/download/hls.js-0.14.17.tgz#0127cff2ec2f994a54eb955fe669ef6153a8e317"
+  integrity sha1-ASfP8uwvmUpU65Vf5mnvYVOo4xc=
+  dependencies:
+    eventemitter3 "^4.0.3"
+    url-toolkit "^2.1.6"
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -5206,6 +5260,11 @@ loader-utils@^2.0.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^2.1.2"
+
+loadjs@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npm.taobao.org/loadjs/download/loadjs-4.2.0.tgz?cache=0&sync_timestamp=1575192852838&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Floadjs%2Fdownload%2Floadjs-4.2.0.tgz#2a0336376397a6a43edf98c9ec3229ddd5abb6f6"
+  integrity sha1-KgM2N2OXpqQ+35jJ7DIp3dWrtvY=
 
 locate-path@^3.0.0:
   version "3.0.0"
@@ -6241,6 +6300,17 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
+plyr@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.npm.taobao.org/plyr/download/plyr-3.6.4.tgz#cc77d49d831b4b0130be075872290cd5e3be5366"
+  integrity sha1-zHfUnYMbSwEwvgdYcikM1eO+U2Y=
+  dependencies:
+    core-js "^3.8.1"
+    custom-event-polyfill "^1.0.7"
+    loadjs "^4.2.0"
+    rangetouch "^2.0.1"
+    url-polyfill "^1.1.12"
+
 pnp-webpack-plugin@^1.6.4:
   version "1.6.4"
   resolved "https://registry.npm.taobao.org/pnp-webpack-plugin/download/pnp-webpack-plugin-1.6.4.tgz?cache=0&sync_timestamp=1592843223538&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpnp-webpack-plugin%2Fdownload%2Fpnp-webpack-plugin-1.6.4.tgz"
@@ -6788,6 +6858,11 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/range-parser/download/range-parser-1.2.1.tgz"
   integrity sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE=
+
+rangetouch@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/rangetouch/download/rangetouch-2.0.1.tgz#c01105110fd3afca2adcb1a580692837d883cb70"
+  integrity sha1-wBEFEQ/Tr8oq3LGlgGkoN9iDy3A=
 
 raw-body@2.4.0:
   version "2.4.0"
@@ -8113,6 +8188,16 @@ url-parse@^1.4.3, url-parse@^1.4.7:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
+url-polyfill@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.npm.taobao.org/url-polyfill/download/url-polyfill-1.1.12.tgz#6cdaa17f6b022841b3aec0bf8dbd87ac0cd33331"
+  integrity sha1-bNqhf2sCKEGzrsC/jb2HrAzTMzE=
+
+url-toolkit@^2.1.6:
+  version "2.2.1"
+  resolved "https://registry.npm.taobao.org/url-toolkit/download/url-toolkit-2.2.1.tgz#89009ed3d62a3574de079532a7266c14d2cc1c4f"
+  integrity sha1-iQCe09YqNXTeB5UypyZsFNLMHE8=
+
 url@^0.11.0:
   version "0.11.0"
   resolved "https://registry.npm.taobao.org/url/download/url-0.11.0.tgz"
@@ -8190,6 +8275,17 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vant@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.npm.taobao.org/vant/download/vant-3.0.10.tgz#ed1d565ae9f34a2f894c8aa7052780a5e8e2feb8"
+  integrity sha1-7R1WWunzSi+JTIqnBSeApeji/rg=
+  dependencies:
+    "@babel/runtime" "7.x"
+    "@vant/icons" "^1.5.3"
+    "@vant/lazyload" "^1.0.4"
+    "@vant/popperjs" "^1.0.4"
+    "@vant/use" "^1.0.5"
 
 vary@~1.1.2:
   version "1.1.2"

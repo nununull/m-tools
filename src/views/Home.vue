@@ -2,13 +2,10 @@
   <div class="main">
     <el-tabs tab-position="left" style="height: 90vh;">
       <el-tab-pane label="PotPlayer">
-        <el-row :gutter="10">
-          <el-col :span="5">
-            <el-card shadow="hover" @click="to('pot-player-m3u8-change')" body-style="background-color: #40B8FF;">
-              <span style="color: white">M3U8转换为PotPlayer的M3U格式文件</span>
-            </el-card>
-          </el-col>
-        </el-row>
+        <van-grid square>
+          <van-grid-item icon="exchange" text="M3U8转换" to="pot-player-m3u8-change" />
+          <van-grid-item icon="play-circle-o" text="电影搜索" to="pot-player-movie-search" />
+        </van-grid>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -32,5 +29,6 @@ export default {
 <style scoped>
 .main {
   padding: 20px;
+  text-align: center;
 }
 </style>

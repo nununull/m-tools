@@ -8,9 +8,19 @@ const routes = [
         component: Home
     },
     {
-        path: '/pot-player/m3u8-change',
+        path: '/pot-player-m3u8-change',
         name: 'pot-player-m3u8-change',
         component: () => import("@/views/potplayer/M3u8change")
+    },
+    {
+        path: '/pot-player-movie-search',
+        name: 'pot-player-movie-search',
+        component: () => import("@/views/potplayer/MovieSearch")
+    },
+    {
+        path: '/pot-player-movie-play',
+        name: 'pot-player-movie-play',
+        component: () => import("@/views/potplayer/MoviePlay")
     }
 ]
 
