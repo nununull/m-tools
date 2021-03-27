@@ -1,8 +1,1 @@
-### 编译打包
-yarn install
-
-yarn build
-
-electron .
-
-electron-builder
+小工具合集
