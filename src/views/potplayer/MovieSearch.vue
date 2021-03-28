@@ -1,11 +1,11 @@
 <template>
   <div class="main">
     <el-row>
-      <el-form inline>
-        <el-form-item label="剧名">
-          <el-input v-model="keywords"></el-input>
+      <el-form inline @submit.native.prevent>
+        <el-form-item label="剧名" v-model="searchParams">
+          <el-input v-model="searchParams.keywords"></el-input>
         </el-form-item>
-        <el-button type="primary" @click="onSearch(1)" @keyup.enter="onSearch(1)">查询</el-button>
+        <el-button type="primary" @click="onSearch(1)">查询</el-button>
       </el-form>
     </el-row>
     <div>
@@ -104,7 +104,9 @@ export default {
   name: "MovieSearch",
   data() {
     return {
-      keywords: "",
+      searchParams: {
+        keywords: ""
+      },
       isShowDeatailDialog: false,
       movieVO: "",
       okResc: {
@@ -123,16 +125,16 @@ export default {
   methods: {
     onSearch(currentPage) {
 
-      if (!this.keywords) {
-        return;
-      }
+      // if (!this.searchParams.keywords) {
+      //   return;
+      // }
 
       this.onSearchOk(currentPage);
     },
     // 搜索OK资源网
     async onSearchOk(currentPage) {
 
-      this.okResc.searchPageParams.wd = this.keywords;
+      this.okResc.searchPageParams.wd = this.searchParams.keywords;
       this.okResc.searchPageParams.pg = currentPage;
 
       let resp = await this.$httpUtil.http(this.$httpApi.SERVICE.OK.page, this.okResc.searchPageParams);
@@ -194,7 +196,7 @@ export default {
 
       localStorage.setItem("movieVO", JSON.stringify(newMovieVO));
 
-      this.$store.commit("updatePlayVO",newMovieVO.playVOList[0]);
+      this.$store.commit("updatePlayVO", newMovieVO.playVOList[0]);
 
       // 打开播放页
       await this.$router.push("pot-player-movie-play");
@@ -318,10 +320,15 @@ export default {
       document.body.removeChild(input);
     },
     keyupEnter() {
+
       let $this = this;
-      document.onkeydown = function (e) {
+
+      document.onkeydown = function () {
+
         let key = window.event.keyCode;
+
         if (key === 13) {
+
           $this.onSearch(1);
         }
       }
