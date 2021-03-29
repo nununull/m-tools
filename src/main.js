@@ -11,6 +11,7 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 import HTTP_API from "./constant/http-api";
 import httpUtil from "@/util/http-util";
+import cnzzAnalytics from "vue-cnzz-analytics";
 
 const app = createApp(App);
 
@@ -18,6 +19,13 @@ app.use(store)
     .use(router)
     .use(ElementPlus, {locale})
     .use(Vant)
+    .use(cnzzAnalytics,{
+        router: router,
+        siteIdList: [
+            1279792411
+        ],
+        isDebug: false
+    })
     .mount('#app');
 
 // 设置全局配置
