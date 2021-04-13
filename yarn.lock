@@ -8311,6 +8311,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vue-cnzz-analytics@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npm.taobao.org/vue-cnzz-analytics/download/vue-cnzz-analytics-2.0.3.tgz#d0204aa0fea917300fb8fdd0d453cb33abbdd58c"
+  integrity sha1-0CBKoP6pFzAPuP3Q1FPLM6u91Yw=
+
 vue-eslint-parser@^7.5.0:
   version "7.5.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.5.0.tgz"
