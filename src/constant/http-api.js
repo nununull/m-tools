@@ -3,7 +3,14 @@ const HTTP_API = {
             OK: {
                 title: "OK资源网",
                 name: "OK资源网",
-                domain: "https://api.okzy.tv/api.php/provide/vod/at/json"
+                domain: "https://api.okzy.tv/api.php/provide/vod/at/json",
+                type: "ok"
+            },
+            BAIDU:{
+                title: "百度云资源",
+                name: "百度云资源",
+                domain: "http://help.apibdzy.com/#wlcome",
+                type: "baidu"
             }
         },
         SERVICE: {
@@ -16,6 +23,18 @@ const HTTP_API = {
                 detail: {
                     name: "资源明细",
                     url: "https://api.okzy.tv/api.php/provide/vod/at/json",
+                    method: "get"
+                }
+            },
+            BAIDU: {
+                page: {
+                    name: "资源列表",
+                    url: "https://api.apibdzy.com/api.php/provide/vod/?ac=list",
+                    method: "get"
+                },
+                detail: {
+                    name: "资源明细",
+                    url: "https://api.apibdzy.com/api.php/provide/vod/?ac=detail",
                     method: "get"
                 }
             },

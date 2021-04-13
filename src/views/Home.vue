@@ -5,6 +5,7 @@
         <van-grid square>
           <van-grid-item icon="exchange" text="M3U8转换" to="pot-player-m3u8-change" />
           <van-grid-item icon="play-circle-o" text="电影搜索" to="pot-player-movie-search" />
+          <van-grid-item icon="play-circle-o" text="M3U8播放" to="pot-player-m3u8-play" />
         </van-grid>
       </el-tab-pane>
     </el-tabs>
