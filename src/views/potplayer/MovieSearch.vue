@@ -2,6 +2,21 @@
   <div class="main">
     <el-row>
       <el-form inline @submit.native.prevent>
+        <el-form-item label="资源站">
+          <el-select
+              v-model="rescTypeList"
+              multiple
+              collapse-tags
+              style="margin-left: 20px;"
+              placeholder="请选择">
+            <el-option
+                v-for="item in rescTypes"
+                :key="item.value"
+                :label="item.name"
+                :value="item.value">
+            </el-option>
+          </el-select>
+        </el-form-item>
         <el-form-item label="剧名" v-model="searchParams">
           <el-input v-model="searchParams.keywords"></el-input>
         </el-form-item>
@@ -98,15 +113,18 @@
 
 <script>
 import {saveAs} from 'file-saver';
-import STRING_UTIL from "../../util/string-util"
+import STRING_UTIL from "../../util/string-util";
+import MOVIE_UTILS from "../../util/movie-utils";
 
 export default {
   name: "MovieSearch",
   data() {
     return {
+      rescTypeList: [this.$httpApi.BASE.BAIDU.type],
       searchParams: {
         keywords: ""
       },
+      result: "",
       isShowDeatailDialog: false,
       movieVO: "",
       okResc: {
@@ -122,14 +140,28 @@ export default {
       }
     }
   },
+  computed: {
+    rescTypes() {
+
+      let rescTypeList = [];
+
+      // 百度云资源
+      rescTypeList.push({name: this.$httpApi.BASE.BAIDU.name, value: this.$httpApi.BASE.BAIDU.type});
+
+      return rescTypeList;
+    }
+  },
   methods: {
-    onSearch(currentPage) {
+    async onSearch(currentPage) {
 
-      // if (!this.searchParams.keywords) {
-      //   return;
-      // }
+      if (0 >= this.rescTypeList) {
 
-      this.onSearchOk(currentPage);
+        this.$message.warning("请选择资源站！");
+
+        return;
+      }
+
+      this.result = await MOVIE_UTILS.search(this.searchParams.keywords, "", currentPage);
     },
     // 搜索OK资源网
     async onSearchOk(currentPage) {

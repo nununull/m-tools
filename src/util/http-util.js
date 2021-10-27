@@ -14,7 +14,7 @@ axiosInstance.defaults.withCredentials = false;
 
 // 包裹请求方法容器
 const http = {
-    http: async function (api, params, isFormData = false, config = {}) {
+    http: async function (api, params, isFormData = false, isNeedLoading = true, loadingMsg = "加载中", config = {}) {
 
         let url = api.url;
         let method = api.method;
@@ -30,6 +30,15 @@ const http = {
             }
         } else {
             newParams = params;
+        }
+
+        // 请求前放一个loading
+        if (isNeedLoading) {
+            // 请求前放一个loading
+            loading = ElLoading.service({
+                fullscreen: true,
+                text: loadingMsg
+            });
         }
 
         // 开始请求
@@ -62,11 +71,6 @@ let loading = null;
 
 axiosInstance.interceptors.request.use(
     config => {
-        // 请求前放一个loading
-        loading = ElLoading.service({
-            fullscreen: true,
-            text: "加载中"
-        });
 
         return config;
     }, error => {
