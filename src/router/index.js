@@ -21,6 +21,11 @@ const routes = [
         path: '/pot-player-movie-play',
         name: 'pot-player-movie-play',
         component: () => import("@/views/potplayer/MoviePlay")
+    },
+    {
+        path: '/movie-play',
+        name: '/movie-play',
+        component: () => import("@/views/movie/MoviePlay")
     }
 ]
 

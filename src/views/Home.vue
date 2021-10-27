@@ -7,6 +7,11 @@
           <van-grid-item icon="play-circle-o" text="电影搜索" to="pot-player-movie-search" />
         </van-grid>
       </el-tab-pane>
+      <el-tab-pane label="播放工具">
+        <van-grid square>
+          <van-grid-item icon="play-circle" text="M3U8播放" to="movie-play" />
+        </van-grid>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
