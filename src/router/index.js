@@ -31,6 +31,11 @@ const routes = [
         path: '/movie-play',
         name: '/movie-play',
         component: () => import("@/views/movie/MoviePlay")
+    },
+    {
+        path: '/movie-vip-parse',
+        name: '/movie-vip-parse',
+        component: () => import("@/views/movie/VipParse")
     }
 ]
 

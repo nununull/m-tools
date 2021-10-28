@@ -30,7 +30,7 @@ export default {
     return {
       movieVO: {
         url: "",
-        playUrl: "http://womlive.cloud.wo.cn/tvlive/100002/otpzod_otpzod,100002_hls_pull_2000K_live.m3u8"
+        playUrl: "https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4"
       }
     }
   },

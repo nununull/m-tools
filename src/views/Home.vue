@@ -11,6 +11,7 @@
       <el-tab-pane label="播放工具">
         <van-grid square>
           <van-grid-item icon="play-circle" text="M3U8播放" to="movie-play" />
+          <van-grid-item icon="play-circle-o" text="VIP解析" to="movie-vip-parse" />
         </van-grid>
       </el-tab-pane>
     </el-tabs>
