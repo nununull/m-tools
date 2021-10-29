@@ -14,16 +14,15 @@
           </el-select>
         </el-form-item>
         <el-form-item label="地址">
-          <el-input v-model="movieVO.playUrl" clearable/>
+          <el-input v-model="movieVO.playUrl" placeholder="请注意输入正确连接" clearable/>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="goPlay">播放</el-button>
         </el-form-item>
       </el-form>
 
-      <div class="player">
-        <iframe :src="playUrl" width="100%"
-                height="500px"
+      <div>
+        <iframe class="player" :src="playUrl"
                 allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen"
                 msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"
                 webkitallowfullscreen="webkitallowfullscreen"
@@ -64,16 +63,23 @@ export default {
     },
     goPlay() {
 
-      let reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/;
+      // let reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/;
+      //
+      // if (!this.movieVO.playUrl || !reg.test(this.movieVO.playUrl)) {
+      //
+      //   this.$message.warning("链接地址有误！");
+      //
+      //   return;
+      // }
 
-      if (!this.movieVO.playUrl || !reg.test(this.movieVO.playUrl)) {
+      if (!this.movieVO.playUrl) {
 
-        this.$message.warning("链接地址有误！");
+        this.$message.warning("链接地址不能为空！");
 
         return;
       }
 
-      this.$message.success("链接校验通过，开始播放！");
+      this.$message.success("开始解析并播放，错误链接可能导致解析失败！");
 
       this.playUrl = this.movieVO.preUrl + this.movieVO.playUrl;
     },
@@ -105,12 +111,24 @@ export default {
   margin-top: 20px;
 }
 
-.player {
-  width: 50%;
-  height: 100%;
+@media only screen and (max-width: 600px) {
+
+  .player {
+    width: 100%;
+    height: 18rem;
+  }
 }
 
-.player-icon{
+@media only screen and (min-width: 800px) {
+
+  .player {
+    width: 40%;
+    height: 30rem;
+  }
+}
+
+.player-icon {
   display: flex;
+  justify-items: first;
 }
 </style>
